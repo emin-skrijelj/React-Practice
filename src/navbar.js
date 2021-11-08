@@ -14,7 +14,7 @@ const NavBar = () =>{
                 <Link to="/multiple">Multiple</Link> 
                 </il>
                 <il>
-                    <Link to="/">Search</Link>
+                    <Link to="/search">Search</Link>
                 </il>
             </ul>
         </nav>

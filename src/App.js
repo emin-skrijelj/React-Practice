@@ -8,6 +8,7 @@ import Error from "./error.js"
 import OneQuote from './one';
 import News from './news.jsx'
 import Home from './home.js'
+import SearchNews from './searchNews';
 
 
 
@@ -18,6 +19,7 @@ function App() {
       <Route path="/" element={<Home/>}/>
       <Route path="multiple" element={<Quote/>}/>
       <Route path="/topheadlines" element={<News/>}/>
+      <Route path="search" element={<SearchNews/>}/>
       <Route path="*" element={<Error/>}/>
     </Routes>
   
