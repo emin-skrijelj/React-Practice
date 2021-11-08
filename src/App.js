@@ -1,25 +1,29 @@
 import logo from './logo.svg';
 import './App.css';
+import Quote from './Quote.jsx';
+import BookList from './BookList.jsx'
+import {Routes,Route,Link} from "react-router-dom"
+import NavBar from "./navbar.js"
+import Error from "./error.js"
+import OneQuote from './one';
+import News from './news.jsx'
+import Home from './home.js'
+
+
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+  return <>
+    <NavBar/>
+    <Routes>
+      <Route path="/" element={<Home/>}/>
+      <Route path="multiple" element={<Quote/>}/>
+      <Route path="/topheadlines" element={<News/>}/>
+      <Route path="*" element={<Error/>}/>
+    </Routes>
+  
+
+  </>
 }
+
 
 export default App;
